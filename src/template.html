@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Weather App</title>
+</head>
+<body>
+    <form id="weather-form">
+        <label for="Location">Location:</label>
+        <input type="text" name="Location" id="Location" required>
+        <button type="submit">Get Weather</button>
+    </form>
+
+    <div class="weather-container" id="weather-container">
+  <div class="current-weather">
+    <div class="location-info">
+      <h2 id="location-name">City Name</h2>
+      <p id="weather-description">Weather Description</p>
+    </div>
+    <div class="weather-main">
+      <div class="temperature" id="current-temp">72°F</div>
+      <img class="weather-icon" id="weather-icon" src="" alt="Weather Icon">
+    </div>
+    <div class="weather-details">
+      <div class="detail-card">
+        <i>🌡️</i>
+        <span id="feels-like">Feels like: 75°F</span>
+      </div>
+      <div class="detail-card">
+        <i>💧</i>
+        <span id="humidity">Humidity: 65%</span>
+      </div>
+      <div class="detail-card">
+        <i>🌬️</i>
+        <span id="wind-speed">Wind: 8 mph</span>
+      </div>
+      <div class="detail-card">
+        <i>☀️</i>
+        <span id="uv-index">UV Index: 5</span>
+      </div>
+    </div>
+  </div>
+  
+  <h3>5-Day Forecast</h3>
+  <div class="forecast-container" id="forecast-container">
+    <!-- Forecast cards will be inserted here by JavaScript -->
+  </div>
+  
+  <div class="alert-container" id="alert-container">
+    <!-- Alerts will be inserted here if they exist -->
+  </div>
+</div>
+</body>
+</html>
