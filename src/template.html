@@ -1,55 +1,90 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Weather App</title>
-</head>
-<body>
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
+    />
+  </head>
+  <body>
+    <div class="github-corner">
+      <a
+        href="https://github.com/Yamen-M"
+        target="_blank"
+        aria-label="View on GitHub"
+      >
+        <i class="fab fa-github"></i>
+      </a>
+    </div>
+
+    <header class="app-header">
+      <h1 class="app-title">WeatherApp</h1>
+      <p class="app-subtitle">WEATHER FORECASTS & ALERTS</p>
+    </header>
+
     <form id="weather-form">
-        <label for="Location">Location:</label>
-        <input type="text" name="Location" id="Location" required>
-        <button type="submit">Get Weather</button>
+      <label for="Location">Location:</label>
+      <input
+        type="text"
+        name="Location"
+        id="Location"
+        required
+        placeholder="Enter country or city..."
+      />
+      <button type="submit">
+        <i class="fas fa-search-location"></i> Get Weather
+      </button>
     </form>
 
     <div class="weather-container" id="weather-container">
-  <div class="current-weather">
-    <div class="location-info">
-      <h2 id="location-name">City Name</h2>
-      <p id="weather-description">Weather Description</p>
+      <div class="current-weather">
+        <div class="location-info">
+          <h2 id="location-name">City Name</h2>
+          <p id="weather-description">Weather Description</p>
+        </div>
+        <div class="weather-main">
+          <div class="temperature" id="current-temp">72°F</div>
+          <span class="weather-icon emoji-icon" id="weather-icon"></span>
+        </div>
+        <div class="weather-details">
+          <div class="detail-card">
+            <i>🌡️</i>
+            <span id="feels-like">Feels like: 75°F</span>
+          </div>
+          <div class="detail-card">
+            <i>💧</i>
+            <span id="humidity">Humidity: 65%</span>
+          </div>
+          <div class="detail-card">
+            <i>🌬️</i>
+            <span id="wind-speed">Wind: 8 mph</span>
+          </div>
+          <div class="detail-card">
+            <i>☀️</i>
+            <span id="uv-index">UV Index: 5</span>
+          </div>
+        </div>
+      </div>
+
+      <h3 class="forecast-title">4-Day Forecast</h3>
+      <div class="forecast-container" id="forecast-container"></div>
+
+      <div class="alert-container" id="alert-container"></div>
     </div>
-    <div class="weather-main">
-      <div class="temperature" id="current-temp">72°F</div>
-      <img class="weather-icon" id="weather-icon" src="" alt="Weather Icon">
+
+    <div class="loading-indicator" id="loading-indicator">
+      <div class="loader"></div>
     </div>
-    <div class="weather-details">
-      <div class="detail-card">
-        <i>🌡️</i>
-        <span id="feels-like">Feels like: 75°F</span>
-      </div>
-      <div class="detail-card">
-        <i>💧</i>
-        <span id="humidity">Humidity: 65%</span>
-      </div>
-      <div class="detail-card">
-        <i>🌬️</i>
-        <span id="wind-speed">Wind: 8 mph</span>
-      </div>
-      <div class="detail-card">
-        <i>☀️</i>
-        <span id="uv-index">UV Index: 5</span>
-      </div>
-    </div>
-  </div>
-  
-  <h3>5-Day Forecast</h3>
-  <div class="forecast-container" id="forecast-container">
-    <!-- Forecast cards will be inserted here by JavaScript -->
-  </div>
-  
-  <div class="alert-container" id="alert-container">
-    <!-- Alerts will be inserted here if they exist -->
-  </div>
-</div>
-</body>
+
+    <footer class="app-footer">
+      <p>&copy;2025 Yamen Morcel. All rights reserved.</p>
+    </footer>
+  </body>
 </html>
