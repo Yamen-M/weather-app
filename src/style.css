@@ -540,6 +540,9 @@ body::before {
   .current-weather {
     grid-template-columns: 1fr;
     padding: 1.8rem;
+    overflow: hidden;
+    margin: 0 -1rem;
+    width: calc(100% + 2rem);
   }
 
   .weather-main {
@@ -548,6 +551,13 @@ body::before {
 
   .weather-details {
     grid-column: span 1;
+    grid-template-columns: 1fr;
+    gap: 0.8rem;
+    margin-top: 1.5rem;
+  }
+
+  .detail-card {
+    padding: 1rem;
   }
 
   .forecast-container {
