@@ -43,6 +43,7 @@ export default function processdata(data) {
                 <span class="weather-icon emoji-icon">${getWeatherIcon(
                   day.icon
                 )}</span>
+                 <p>${day.conditions}</p>
                 <div class="forecast-temp">
                     <span class="high-temp">${fahrenheitToCelsius(
                       day.tempmax
